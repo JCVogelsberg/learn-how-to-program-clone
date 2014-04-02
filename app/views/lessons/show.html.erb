@@ -1,0 +1,20 @@
+<h1>Lesson <%= @lesson.number %>:</h1>
+ <br>
+<h3><i>"<%= @lesson.name %>"</i></h3>
+
+<p><a href="/lessons/<%= @lesson.number %>/edit">Edit this Lesson</a></p>
+
+<p><a href="/lessons/<%= @lesson.number %>/destroy">Delete this Lesson</a></p>
+
+<p><a href="/lessons">Go back to Lessons Index</a></p>
+
+<br>
+<% if @next_lesson != nil %>
+  <span>Next Lesson: <i><a href="/lessons/<%= @next_lesson.number %>"><%= @next_lesson.name %></a></i></span>
+<% end %>
+<br><br>
+<% if @prev_lesson != nil %>
+  <span>Previous Lesson: <i><a href="/lessons/<%= @prev_lesson.number %>"><%= @prev_lesson.name %></a></i></span>
+<% end %>
+
+
